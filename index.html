@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <title>MedInv — Ihre physische Mediensammlung, selbst gehostet</title>
+  <meta name="description" content="MedInv ist eine selbstgehostete Web-App, um Bücher, CDs und DVDs/Blu-rays zu katalogisieren: Barcode scannen, Metadaten automatisch abrufen, durchsuchen und auswerten. Quelloffen auf GitHub." />
+
+  <link rel="canonical" href="https://medinv.de/" />
+  <link rel="alternate" hreflang="de" href="https://medinv.de/" />
+  <link rel="alternate" hreflang="en" href="https://medinv.de/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://medinv.de/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MedInv" />
+  <meta property="og:title" content="MedInv — Ihre physische Mediensammlung, selbst gehostet" />
+  <meta property="og:description" content="MedInv ist eine selbstgehostete Web-App, um Bücher, CDs und DVDs/Blu-rays zu katalogisieren: Barcode scannen, Metadaten automatisch abrufen, durchsuchen und auswerten." />
+  <meta property="og:url" content="https://medinv.de/" />
+  <meta property="og:image" content="https://medinv.de/assets/img/og-image-de.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MedInv — Ihre physische Mediensammlung, selbst gehostet" />
+  <meta name="twitter:description" content="MedInv ist eine selbstgehostete Web-App, um Bücher, CDs und DVDs/Blu-rays zu katalogisieren: Barcode scannen, Metadaten automatisch abrufen, durchsuchen und auswerten." />
+  <meta name="twitter:image" content="https://medinv.de/assets/img/og-image-de.png" />
+
+  <meta name="theme-color" content="#0f4c81" />
+  <meta name="theme-color" content="#12181f" media="(prefers-color-scheme: dark)" />
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MedInv",
+    "description": "MedInv ist eine selbstgehostete Web-App, um Bücher, CDs und DVDs/Blu-rays zu katalogisieren: Barcode scannen, Metadaten automatisch abrufen, durchsuchen und auswerten.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Linux, Docker",
+    "softwareVersion": "0.7",
+    "license": "https://github.com/vulture20/MedInv/blob/main/LICENSE",
+    "url": "https://medinv.de/",
+    "image": "https://medinv.de/assets/img/og-image-de.png",
+    "author": { "@type": "Person", "name": "Thorsten Schröpel" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "inLanguage": "de"
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <img src="assets/img/logo.svg" alt="" width="30" height="30" />
+        MedInv
+      </a>
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a href="#funktionen">Funktionen</a>
+          <a href="#einblicke">Einblicke</a>
+          <a href="#quickstart">Schnellstart</a>
+          <a class="btn btn-ghost" href="https://github.com/vulture20/MedInv" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.25 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.16.69-3.83-1.36-3.83-1.36-.52-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.62 0-1.24.44-2.26 1.16-3.06-.12-.28-.5-1.44.11-3 0 0 .95-.3 3.12 1.17a10.9 10.9 0 0 1 5.68 0c2.17-1.47 3.12-1.17 3.12-1.17.61 1.56.23 2.72.11 3 .72.8 1.16 1.82 1.16 3.06 0 4.37-2.66 5.33-5.19 5.61.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Sprache / Language">
+          <a class="lang-btn is-active" href="/" aria-current="page">DE</a>
+          <a class="lang-btn" href="/en/">EN</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- Hero ============================================================ -->
+    <header class="hero">
+      <div class="wrap">
+        <span class="status-pill"><span class="dot"></span> Early Beta · aktiv entwickelt · AGPL-3.0-lizenziert</span>
+
+        <h1>Eine Bibliothek für Bücher, CDs und Filme — geführt von Ihnen, gehostet auf Ihrem Server.</h1>
+
+        <p class="lede">
+          MedInv katalogisiert physische Sammlungen automatisch: Barcode scannen,
+          Titel &amp; Cover per Metadaten-Recherche abrufen lassen, in beliebig
+          vielen Bibliotheken organisieren — und jederzeit durchsuchen, auswerten
+          und mit anderen teilen. Läuft komplett auf eigener Infrastruktur.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/vulture20/MedInv" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.25 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.16.69-3.83-1.36-3.83-1.36-.52-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.62 0-1.24.44-2.26 1.16-3.06-.12-.28-.5-1.44.11-3 0 0 .95-.3 3.12 1.17a10.9 10.9 0 0 1 5.68 0c2.17-1.47 3.12-1.17 3.12-1.17.61 1.56.23 2.72.11 3 .72.8 1.16 1.82 1.16 3.06 0 4.37-2.66 5.33-5.19 5.61.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5Z"/></svg>
+            <span>Quellcode ansehen</span>
+          </a>
+          <a class="btn btn-ghost" href="#quickstart">
+            <span>Mit Docker starten</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="barcode" style="margin-top:56px;" aria-hidden="true"></div>
+
+      <div class="wrap hero-shot reveal">
+        <figure class="browser-frame">
+          <div class="chrome"><span></span><span></span><span></span></div>
+          <img src="assets/img/screenshot-statistics.png" alt="Statistik-Ansicht von MedInv mit Wertverlauf und Genre-Verteilung einer Bibliothek" loading="eager" width="1800" height="1000" />
+        </figure>
+      </div>
+    </header>
+
+    <!-- Funktionen ====================================================== -->
+    <section id="funktionen">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionsumfang</span>
+          <h2>Alles, was eine ernsthafte Sammlung braucht.</h2>
+          <p>Sechs Bereiche, ein Werkzeug — vom ersten Scan bis zur letzten Sicherungskopie.</p>
+        </div>
+
+        <div class="feature-grid reveal">
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H10a1.5 1.5 0 0 1 1.5 1.5v16A1.5 1.5 0 0 0 10 19H4.5A1.5 1.5 0 0 1 3 17.5v-13Z"/><path d="M13.5 6.2 18.6 5a1.5 1.5 0 0 1 1.82 1.1l3.4 15.3a1.5 1.5 0 0 1-1.13 1.8l-4.9 1.2A1.5 1.5 0 0 1 16 22.9L12.6 8.1"/><path d="M6.5 7h2M6.5 10.5h2M6.5 14h2"/></svg>
+            </div>
+            <h3>Medien &amp; Bibliotheken</h3>
+            <p>Drei eigenständige Medientypen — Bücher, CDs, DVDs/Blu-rays — mit fest zugeschnittenen Feldern statt generischem Freitext. Beliebig viele unabhängige Bibliotheken, granular pro Nutzer freigegeben.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="14" height="14" rx="1.4"/><path d="M6 4V2.5M13 4V2.5M2.5 9h14"/><path d="M17 8.5 21.5 6v9L17 12.5"/></svg>
+            </div>
+            <h3>Erfassung &amp; Metadaten</h3>
+            <p>Barcode scannen oder Titel eintippen — MedInv fragt bis zu neun Anbieter je Medientyp automatisch ab und lädt Cover lokal herunter. Kein Treffer ist eine Sackgasse: manuelle Erfassung bleibt immer möglich.</p>
+            <div class="taglist">
+              <span>EAN/ISBN-Scan</span>
+              <span>KI-Recherche optional</span>
+              <span>Cover-Download</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.7-4.7"/></svg>
+            </div>
+            <h3>Suche &amp; Statistik</h3>
+            <p>Volltextsuche mit echter Tippfehlertoleranz, feine Filter nach Genre, Sprache, Jahr oder Preis. Dazu Verteilungen und Wertverlauf pro Bibliothek — inklusive automatischer Währungsumrechnung.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4.5 5.8v5.4c0 5 3.2 8.9 7.5 10.3 4.3-1.4 7.5-5.3 7.5-10.3V5.8L12 2.5Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg>
+            </div>
+            <h3>Zugriff &amp; Freigabe</h3>
+            <p>Drei Kontostufen — Gast, Nutzer, Admin — plus feingranulare Freigabe je Bibliothek. Optionales OpenID-Connect-/OAuth2-Login neben klassischen Konten, mit Brute-Force-Schutz.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5h16M4 7.5v11A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-11M4 7.5l1.6-3.6A1.5 1.5 0 0 1 6.97 3h10.06a1.5 1.5 0 0 1 1.37.9L20 7.5"/><path d="M10 11.5h4"/></svg>
+            </div>
+            <h3>Backup, Export &amp; Import</h3>
+            <p>Automatische und manuelle Sicherungen mit konfigurierbarer Aufbewahrung, plus ein Sicherungspunkt vor jedem schemaändernden Update. Volle Instanzwiederherstellung oder gezielter Bibliotheks-Export.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9S9.5 5.5 12 3Z"/></svg>
+            </div>
+            <h3>Sprachen &amp; Themes</h3>
+            <p>18 mitgelieferte Sprachpakete, sechs Themes und ein eigenes CSS-Plugin-System für individuelles Aussehen — pro Instanz umschaltbar, mit Editor für weitere Sprachen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="barcode" aria-hidden="true"></div>
+
+    <!-- Einblicke ======================================================= -->
+    <section id="einblicke">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">In der Praxis</span>
+          <h2>So fühlt sich die eigene Sammlung an.</h2>
+          <p>Echte Oberfläche, echte Beispieldaten — keine Mockups.</p>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-search.png" alt="Suchseite mit Filtern nach Medienart, Genre, Sprache, Preis und Erscheinungsjahr" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Suche</span>
+            <h3>Jeden Titel wiederfinden, egal wie groß die Sammlung wächst.</h3>
+            <p>Eine Volltextsuche über alle sichtbaren Bibliotheken hinweg, kombinierbar mit strukturierten Filtern — und einer echten, tippfehlertoleranten Fuzzy-Suche für den Fall, dass der Name nicht mehr ganz präsent ist.</p>
+            <ul>
+              <li>Filter nach Medienart, Genre, Sprache, Medium, Preis, Jahr</li>
+              <li>Gespeicherte Suchen für wiederkehrende Abfragen</li>
+              <li>Ergebnisse respektieren Bibliotheksfreigaben automatisch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="showcase-row reverse reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-capture.png" alt="Erfassungsseite von MedInv mit Barcode-Eingabe, Kamera-Scan und Erfassung ohne EAN" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Erfassung</span>
+            <h3>Scannen statt abtippen.</h3>
+            <p>Ein Barcode genügt: MedInv fragt alle aktivierten Metadaten-Anbieter parallel ab und führt die Ergebnisse Feld für Feld zusammen. Kein passender Code zur Hand? Die Freitextsuche nach Titel funktioniert genauso gut.</p>
+            <ul>
+              <li>Kamera-Scan direkt im Browser oder manuelle Eingabe</li>
+              <li>Massenimport ganzer Listen per Textdatei</li>
+              <li>Nachträglicher Metadaten-Refresh je Titel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-library.png" alt="Bibliotheksansicht mit Titelliste, Autor und EAN, sowie PDF-Export" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Bibliotheken</span>
+            <h3>Klare Listen statt Karteichaos.</h3>
+            <p>Jede Bibliothek zeigt ihren Bestand als sortier- und exportierbare Liste — inklusive PDF-Export, Mehrfachauswahl für Sammeländerungen und direktem Zugriff auf jedes Detail.</p>
+            <ul>
+              <li>Massenbearbeitung und -löschung ausgewählter Titel</li>
+              <li>PDF-Export der gesamten Bibliothek</li>
+              <li>Freie Standortangabe je Exemplar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="showcase-row reverse reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-plugins.png" alt="Plugin-Verwaltung mit Metadaten-Anbietern je Medientyp, Version, Quelle, EAN-Unterstützung und Aktivierung" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Plugins</span>
+            <h3>Jeder Metadaten-Anbieter einzeln steuerbar.</h3>
+            <p>Über zwanzig Metadaten-Anbieter je nach Medientyp — API-basiert, per Web-Scraping oder KI-gestützt — lassen sich einzeln aktivieren, konfigurieren und testen, ganz ohne Codeänderung.</p>
+            <ul>
+              <li>Eigener API-Schlüssel &amp; Einstellungen pro Anbieter</li>
+              <li>EAN-Unterstützung je Anbieter auf einen Blick erkennbar</li>
+              <li>Verbindungstest direkt in der Oberfläche</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-reports.png" alt="Übersicht der Auswertungen: Dubletten, Datenqualität, Neueste Zugänge, Top-Listen, Erfassungsart, Freigaben" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Auswertungen</span>
+            <h3>Antworten auf konkrete Fragen zur Sammlung.</h3>
+            <p>Sieben vorgefertigte Tabellen beantworten, was eine Statistik allein nicht zeigt: Wo gibt es Dubletten? Welchen Einträgen fehlen Cover oder Preis? Was kam zuletzt hinzu?</p>
+            <ul>
+              <li>Dubletten, Datenqualität, Top-Listen, Freigaben &amp; mehr</li>
+              <li>Jede Tabelle als PDF exportierbar</li>
+              <li>Bibliotheksübergreifend, respektiert Freigaben</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="showcase-row reverse reveal">
+          <div class="showcase-media">
+            <figure class="browser-frame">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <img src="assets/img/screenshot-statistics-dvd.png" alt="Statistik-Verteilungen nach Regisseur, Medium und Erscheinungsjahr für eine DVD/Blu-ray-Bibliothek" loading="lazy" width="1800" height="1250" />
+            </figure>
+          </div>
+          <div class="showcase-copy">
+            <span class="eyebrow">Statistiken</span>
+            <h3>Die Sammlung in Zahlen, sortiert nach Häufigkeit.</h3>
+            <p>Jede Bibliothek bekommt eigene Verteilungen — Genre, Sprache, Regisseur, Medium, Erscheinungsjahr — plus Wertverlauf über die Zeit und automatische Währungsumrechnung bei gemischten Beständen.</p>
+            <ul>
+              <li>Verteilungen stets nach Häufigkeit sortiert</li>
+              <li>Wertverlauf über die Zeit, je Bibliothek</li>
+              <li>Automatische Umrechnung bei mehreren Währungen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quickstart ======================================================= -->
+    <section id="quickstart">
+      <div class="wrap">
+        <div class="quickstart reveal">
+          <div class="section-head">
+            <span class="eyebrow">Schnellstart</span>
+            <h2>Ein Container, kein Setup-Marathon.</h2>
+            <p>MedInv läuft als einzelnes, in sich geschlossenes Docker-Image — eingebettete SQLite-Datenbank inklusive, kein separater Datenbank-Container nötig.</p>
+          </div>
+
+          <div class="code-block">
+            <div class="code-head">
+              <span>Terminal</span>
+              <button class="copy-btn" id="copyBtn" type="button" data-copy="docker run -d --name medinv -p 8080:8080 -e MEDINV_ADMINUSER=admin@example.com -e MEDINV_ADMINPASS='ChangeMe123!' -v medinv-storage:/var/www/backend/storage --restart unless-stopped ghcr.io/vulture20/medinv:latest" data-copied-label="Kopiert ✓">Befehl kopieren</button>
+            </div>
+            <pre><code><span class="tok-cmt"># Läuft danach unter http://localhost:8080</span>
+docker run -d \
+  <span class="tok-flag">--name</span> medinv \
+  <span class="tok-flag">-p</span> <span class="tok-str">8080:8080</span> \
+  <span class="tok-flag">-e</span> <span class="tok-key">MEDINV_ADMINUSER</span>=<span class="tok-str">admin@example.com</span> \
+  <span class="tok-flag">-e</span> <span class="tok-key">MEDINV_ADMINPASS</span>=<span class="tok-str">'ChangeMe123!'</span> \
+  <span class="tok-flag">-v</span> <span class="tok-str">medinv-storage:/var/www/backend/storage</span> \
+  <span class="tok-flag">--restart</span> unless-stopped \
+  ghcr.io/vulture20/medinv:latest</code></pre>
+          </div>
+
+          <p class="quickstart-note">
+            Das Volume <code>medinv-storage</code> sorgt dafür, dass Datenbank, Cover und Backups Neustarts überleben — immer mitmounten.
+            Alle Optionen, inklusive MariaDB/PostgreSQL-Anbindung, stehen in der
+            <a href="https://github.com/vulture20/MedInv#-quick-start-with-docker" target="_blank" rel="noopener">README auf GitHub</a>.
+          </p>
+
+          <div class="stack">
+            <span><strong>Backend</strong> · PHP / Laravel 13</span>
+            <span><strong>Frontend</strong> · React / TypeScript</span>
+            <span><strong>Datenbank</strong> · SQLite, MariaDB oder PostgreSQL</span>
+            <span><strong>Deployment</strong> · ein Docker-Image, ein Port</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <img src="assets/img/logo.svg" alt="" width="30" height="30" />
+            MedInv
+          </a>
+          <p>Selbstgehostete Verwaltung physischer Mediensammlungen. Quelloffen, mit Claude Code entwickelt.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Projekt</h4>
+            <a href="https://github.com/vulture20/MedInv" target="_blank" rel="noopener">Quellcode</a>
+            <a href="https://github.com/vulture20/MedInv/issues" target="_blank" rel="noopener">Issues</a>
+            <a href="https://github.com/vulture20/MedInv/pkgs/container/medinv" target="_blank" rel="noopener">Docker-Image</a>
+            <a href="https://github.com/vulture20/MedInv/blob/main/LICENSE" target="_blank" rel="noopener">Lizenz (AGPLv3)</a>
+          </div>
+          <div class="footer-col">
+            <h4>Seite</h4>
+            <a href="#funktionen">Funktionen</a>
+            <a href="#einblicke">Einblicke</a>
+            <a href="#quickstart">Schnellstart</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> MedInv · Thorsten Schröpel</span>
+        <span>Aktueller Stand: v0.7 · Early Beta</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
